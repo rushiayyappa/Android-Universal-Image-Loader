@@ -59,6 +59,9 @@ ImageLoader imageLoader = ImageLoader.getInstance(); // Get singleton instance
 ``` java
 // Load image, decode it to Bitmap and display Bitmap in ImageView (or any other view 
 //	which implements ImageAware interface)
+
+ImageLoaderConfiguration.Builder builder=ImageLoaderConfiguration.Builder(context);
+            imageLoader.init(builder.build());
 imageLoader.displayImage(imageUri, imageView);
 ```
 ``` java
